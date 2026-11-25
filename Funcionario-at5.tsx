@@ -1,4 +1,4 @@
-export abstract class Funcionario {
+export class Funcionario {
     private id: number;
     private nome: string;
     private telefone: string;
@@ -11,6 +11,14 @@ export abstract class Funcionario {
         this.telefone = telefone;
         this.matricula = matricula;
         this.endereco = endereco;
+    }
+
+    public getNome(): string {
+        return this.nome;
+    }
+
+    public calculaSalario(): void {
+        console.log(`Calculando salário do funcionário ${this.nome}`);
     }
     
 }
